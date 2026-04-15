@@ -18,20 +18,20 @@
             --primary: #0a0a0a;
             --primary-dark: #000000;
             --secondary: #1a365d;
-            --secondary-light: #2d3748;
+            --secondary-light: #2f425d;
             --accent: #c53030;
             --accent-light: #e53e3e;
-            --light-bg: #1a202c;
-            --light-bg-alt: #2d3748;
-            --text-dark: #f7fafc;
-            --text-gray: #a0aec0;
-            --text-gray-light: #cbd5e0;
-            --border: #4a5568;
+            --light-bg: #161b24;
+            --light-bg-alt: #24303f;
+            --text-dark: #f8fafc;
+            --text-gray: #c0c9d6;
+            --text-gray-light: #e2e8f0;
+            --border: #53627a;
             --border-light: #718096;
             --success: #38a169;
             --success-light: #48bb78;
-            --shadow: rgba(0, 0, 0, 0.3);
-            --shadow-light: rgba(0, 0, 0, 0.15);
+            --shadow: rgba(0, 0, 0, 0.35);
+            --shadow-light: rgba(0, 0, 0, 0.18);
         }
 
         body {
@@ -58,14 +58,38 @@
         }
 
         .logo {
-            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-mark {
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
             font-weight: 900;
-            letter-spacing: 3px;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 3px 6px var(--shadow);
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        .logo-subtitle {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.78);
+            text-transform: uppercase;
         }
 
         .cta-header {
@@ -80,6 +104,24 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
+        }
+
+        .email-btn {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.3s;
+        }
+
+        .email-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
         }
 
         .whatsapp-btn {
@@ -215,16 +257,21 @@
         }
 
         .hero-logo {
-            font-size: 3.5rem;
-            font-weight: 900;
-            letter-spacing: 4px;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 4px 8px var(--shadow);
-            margin-bottom: 1rem;
-            display: block;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-logo .logo-mark {
+            width: 110px;
+            height: 110px;
+        }
+
+        .hero-logo-text {
+            margin-top: 0.75rem;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: var(--text-gray-light);
         }
 
         /* Section Styling */
@@ -389,21 +436,24 @@
 
         .diff-card {
             padding: 2rem;
-            border-radius: 8px;
-            background: white;
+            border-radius: 12px;
+            background: var(--light-bg-alt);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px var(--shadow-light);
+            color: var(--text-dark);
         }
 
         .diff-card.nosotros {
             border: 3px solid var(--success);
-            background: rgba(46, 204, 64, 0.05);
+            background: rgba(56, 161, 105, 0.08);
         }
 
         .diff-card.otros {
-            border: 2px solid var(--border);
+            border: 2px solid rgba(255, 255, 255, 0.08);
         }
 
         .diff-card h4 {
-            color: var(--primary);
+            color: var(--text-dark);
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
         }
@@ -417,7 +467,8 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-gray-light);
         }
 
         .diff-list li:last-child {
@@ -614,16 +665,15 @@
         }
 
         .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 2px 4px var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 1rem;
-            display: block;
+        }
+
+        .footer-logo .logo-mark {
+            width: 70px;
+            height: 70px;
         }
 
         .footer-section a {
@@ -815,8 +865,32 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">AGNEXUS</div>
+        <a href="#" class="logo">
+            <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="AGNEXUS logo">
+                <defs>
+                    <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#53b8ff" />
+                        <stop offset="100%" stop-color="#1b4ec8" />
+                    </linearGradient>
+                    <linearGradient id="logoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#1b4ec8" />
+                        <stop offset="100%" stop-color="#53b8ff" />
+                    </linearGradient>
+                </defs>
+                <g fill="none" stroke-linecap="round" stroke-width="20">
+                    <path d="M50 30 H120 A20 20 0 0 1 140 50 V90" stroke="url(#logoGrad1)" />
+                    <path d="M170 50 V120 A20 20 0 0 1 150 140 H110" stroke="url(#logoGrad2)" />
+                    <path d="M150 170 H80 A20 20 0 0 1 60 150 V110" stroke="url(#logoGrad1)" />
+                    <path d="M30 150 V80 A20 20 0 0 1 50 60 H90" stroke="url(#logoGrad2)" />
+                </g>
+            </svg>
+            <span class="logo-text">
+                <span class="logo-main">AGNEXUS</span>
+                <span class="logo-subtitle">NETWORKS</span>
+            </span>
+        </a>
         <div class="cta-header">
+            <a href="mailto:contacto@agnexus.com" class="email-btn">✉️ contacto@agnexus.com</a>
             <a href="https://wa.me/593992217314?text=Hola%20AGNEXUS!%20Me%20interesa%20conocer%20sobre%20sus%20soluciones%20tecnológicas"
                 target="_blank" class="whatsapp-btn">
                 <span>💬</span>
@@ -830,7 +904,27 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">✓ Confiabilidad garantizada | Soporte 24/7</div>
-            <div class="hero-logo">AGNEXUS</div>
+            <div class="hero-logo">
+                <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="AGNEXUS logo">
+                    <defs>
+                        <linearGradient id="heroLogoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#53b8ff" />
+                            <stop offset="100%" stop-color="#1b4ec8" />
+                        </linearGradient>
+                        <linearGradient id="heroLogoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#1b4ec8" />
+                            <stop offset="100%" stop-color="#53b8ff" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="none" stroke-linecap="round" stroke-width="20">
+                        <path d="M50 30 H120 A20 20 0 0 1 140 50 V90" stroke="url(#heroLogoGrad1)" />
+                        <path d="M170 50 V120 A20 20 0 0 1 150 140 H110" stroke="url(#heroLogoGrad2)" />
+                        <path d="M150 170 H80 A20 20 0 0 1 60 150 V110" stroke="url(#heroLogoGrad1)" />
+                        <path d="M30 150 V80 A20 20 0 0 1 50 60 H90" stroke="url(#heroLogoGrad2)" />
+                    </g>
+                </svg>
+            </div>
             <h1>Conectividad Empresarial que Impulsa tu Negocio</h1>
             <p class="hero-subtitle">Implementamos soluciones tecnológicas empresariales que mejoran la conectividad, la
                 comunicación y el control operativo de tu negocio</p>
@@ -1103,7 +1197,27 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <div class="footer-logo">AGNEXUS</div>
+                <div class="footer-logo">
+                    <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="AGNEXUS logo">
+                        <defs>
+                            <linearGradient id="footerLogoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#53b8ff" />
+                                <stop offset="100%" stop-color="#1b4ec8" />
+                            </linearGradient>
+                            <linearGradient id="footerLogoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1b4ec8" />
+                                <stop offset="100%" stop-color="#53b8ff" />
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke-linecap="round" stroke-width="20">
+                            <path d="M50 30 H120 A20 20 0 0 1 140 50 V90" stroke="url(#footerLogoGrad1)" />
+                            <path d="M170 50 V120 A20 20 0 0 1 150 140 H110" stroke="url(#footerLogoGrad2)" />
+                            <path d="M150 170 H80 A20 20 0 0 1 60 150 V110" stroke="url(#footerLogoGrad1)" />
+                            <path d="M30 150 V80 A20 20 0 0 1 50 60 H90" stroke="url(#footerLogoGrad2)" />
+                        </g>
+                    </svg>
+                </div>
                 <p style="color: #b3d9ff; margin-bottom: 1rem;">Soluciones Tecnológicas Empresariales en Quito, Ecuador
                 </p>
             </div>
