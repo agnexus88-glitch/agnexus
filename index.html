@@ -58,14 +58,14 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 2px;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 3px;
             background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 2px 4px var(--shadow);
+            text-shadow: 0 3px 6px var(--shadow);
         }
 
         .cta-header {
@@ -214,17 +214,17 @@
             transform: translateY(-2px);
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px var(--shadow);
-            backdrop-filter: blur(10px);
+        .hero-logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px var(--shadow);
+            margin-bottom: 1rem;
+            display: block;
         }
 
         /* Section Styling */
@@ -613,11 +613,17 @@
             margin-right: auto;
         }
 
-        .footer-section h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-gray-light);
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px var(--shadow);
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .footer-section a {
@@ -651,7 +657,12 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
+            }
+
+            .hero-logo {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
             }
 
             .hero-subtitle {
@@ -702,8 +713,8 @@
 
         @media (max-width: 480px) {
             .logo {
-                font-size: 1.3rem;
-                letter-spacing: 1px;
+                font-size: 2rem;
+                letter-spacing: 2px;
             }
 
             .hero {
@@ -792,6 +803,11 @@
                 height: 60px;
                 font-size: 2rem;
             }
+
+            .footer-logo {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
         }
     </style>
 </head>
@@ -814,6 +830,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">✓ Confiabilidad garantizada | Soporte 24/7</div>
+            <div class="hero-logo">AGNEXUS</div>
             <h1>Conectividad Empresarial que Impulsa tu Negocio</h1>
             <p class="hero-subtitle">Implementamos soluciones tecnológicas empresariales que mejoran la conectividad, la
                 comunicación y el control operativo de tu negocio</p>
@@ -1086,7 +1103,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>AGNEXUS</h4>
+                <div class="footer-logo">AGNEXUS</div>
                 <p style="color: #b3d9ff; margin-bottom: 1rem;">Soluciones Tecnológicas Empresariales en Quito, Ecuador
                 </p>
             </div>
