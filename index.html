@@ -13,13 +13,13 @@
         content="Soluciones completas de conectividad, telefonía IP, WiFi profesional y monitoreo IoT para empresas en Quito. Expertos en infraestructura tecnológica.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agnexus.com/">
-    <meta property="og:image" content="assets/images/agnexus-logo.png">
+    <meta property="og:image" content="assets/images/LOGO AGNEXUS.PNG">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AGNEXUS | Soluciones Tecnológicas Empresariales para PYMEs en Quito">
     <meta name="twitter:description"
         content="Soluciones completas de conectividad, telefonía IP, WiFi profesional y monitoreo IoT para empresas en Quito. Expertos en infraestructura tecnológica.">
-    <meta name="twitter:image" content="assets/images/agnexus-logo.png">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="twitter:image" content="assets/images/LOGO AGNEXUS.PNG">
+    <meta name="theme-color" content="#ffffff">
     <style>
         * {
             margin: 0;
@@ -28,45 +28,44 @@
         }
 
         :root {
-            --primary: #0a0a0a;
-            --primary-dark: #000000;
-            --secondary: #1a365d;
-            --secondary-light: #2f425d;
-            --accent: #c53030;
-            --accent-light: #e53e3e;
-            --light-bg: #161b24;
-            --light-bg-alt: #24303f;
-            --text-dark: #f8fafc;
-            --text-gray: #c0c9d6;
-            --text-gray-light: #e2e8f0;
-            --border: #53627a;
-            --border-light: #718096;
-            --success: #38a169;
-            --success-light: #48bb78;
-            --shadow: rgba(0, 0, 0, 0.35);
-            --shadow-light: rgba(0, 0, 0, 0.18);
+            --primary: #ffffff;
+            --primary-dark: #f8f9fa;
+            --secondary: #6c757d;
+            --secondary-light: #adb5bd;
+            --accent: #28a745;
+            --accent-light: #20c997;
+            --light-bg: #ffffff;
+            --light-bg-alt: #f8f9fa;
+            --text-dark: #212529;
+            --text-gray: #6c757d;
+            --text-gray-light: #adb5bd;
+            --border: #dee2e6;
+            --border-light: #e9ecef;
+            --success: #28a745;
+            --success-light: #20c997;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-light: rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
+            background: var(--primary);
             overflow-x: hidden;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 1.2rem 2rem;
+            background: var(--primary);
+            color: var(--text-dark);
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 20px var(--shadow);
-            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
         }
 
@@ -75,7 +74,7 @@
             align-items: center;
             gap: 0.85rem;
             text-decoration: none;
-            color: white;
+            color: var(--text-dark);
         }
 
         .logo-mark {
@@ -93,15 +92,15 @@
 
         .logo-main {
             font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: white;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: var(--text-dark);
         }
 
         .logo-subtitle {
             font-size: 0.72rem;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.78);
+            letter-spacing: 0;
+            color: var(--text-gray);
             text-transform: uppercase;
         }
 
@@ -120,44 +119,44 @@
         }
 
         .email-btn {
-            background: rgba(255, 255, 255, 0.12);
-            color: white;
+            background: var(--light-bg-alt);
+            color: var(--text-dark);
             display: flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1rem;
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            transition: all 0.3s;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
 
         .email-btn:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+            background: var(--border-light);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--shadow);
         }
 
         .whatsapp-btn {
-            background: linear-gradient(135deg, var(--success) 0%, var(--success-light) 100%);
+            background: var(--success);
             color: white;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 15px var(--shadow);
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .whatsapp-btn:hover {
-            background: linear-gradient(135deg, var(--success-light) 0%, var(--success) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(56, 161, 105, 0.4);
+            background: var(--success-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(40, 167, 69, 0.3);
         }
 
         .nav-toggle {
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: var(--text-dark);
             font-size: 1.5rem;
             cursor: pointer;
         }
@@ -178,9 +177,9 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--primary-dark) 100%);
-            color: white;
-            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--light-bg-alt) 100%);
+            color: var(--text-dark);
+            padding: 6rem 2rem;
             text-align: center;
             min-height: 650px;
             display: flex;
@@ -195,9 +194,9 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(26, 54, 93, 0.15) 0%, transparent 70%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(108, 117, 125, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -206,9 +205,9 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(197, 48, 48, 0.1) 0%, transparent 70%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(40, 167, 69, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -219,11 +218,11 @@
 
         .hero h1 {
             font-size: 3.2rem;
-            font-weight: 900;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.1;
-            letter-spacing: -1px;
-            text-shadow: 0 2px 4px var(--shadow);
+            letter-spacing: -0.02em;
+            text-shadow: none;
         }
 
         .hero-subtitle {
@@ -894,8 +893,8 @@
     <header>
         <a href="#" class="logo">
             <picture>
-                <source srcset="assets/images/agnexus-logo.webp" type="image/webp">
-                <img src="assets/images/agnexus-logo.png" alt="AGNEXUS logo" class="logo-mark">
+                <source srcset="assets/images/LOGO AGNEXUS.PNG" type="image/png">
+                <img src="assets/images/LOGO AGNEXUS.PNG" alt="AGNEXUS logo" class="logo-mark">
             </picture>
             <span class="logo-text">
                 <span class="logo-main">AGNEXUS</span>
@@ -919,8 +918,8 @@
             <div class="hero-badge">✓ Confiabilidad garantizada | Soporte 24/7</div>
             <div class="hero-logo">
                 <picture>
-                    <source srcset="assets/images/agnexus-logo.webp" type="image/webp">
-                    <img src="assets/images/agnexus-logo.png" alt="AGNEXUS logo" class="logo-mark">
+                    <source srcset="assets/images/LOGO AGNEXUS.PNG" type="image/png">
+                    <img src="assets/images/LOGO AGNEXUS.PNG" alt="AGNEXUS logo" class="logo-mark">
                 </picture>
             </div>
             <h1>Conectividad Empresarial que Impulsa tu Negocio</h1>
