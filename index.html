@@ -171,6 +171,29 @@
             box-shadow: 0 12px 28px rgba(31, 119, 180, 0.3);
         }
 
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin: 0 auto;
+        }
+
+        .main-nav a {
+            color: rgba(255, 255, 255, 0.82);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         .nav-toggle {
             display: none;
             background: none;
@@ -178,6 +201,15 @@
             color: #ffffff;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section[id] {
+            scroll-margin-top: 88px;
         }
 
         /* Logo in Header */
@@ -532,6 +564,82 @@
             font-size: 1.2rem;
         }
 
+        /* Portafolio */
+        .portafolio {
+            background: var(--light-bg-alt);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .portafolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portafolio-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .portafolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+        }
+
+        .portafolio-thumb {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #0c2942 0%, #1c4b75 100%);
+        }
+
+        .portafolio-body {
+            padding: 1.75rem;
+        }
+
+        .portafolio-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--secondary);
+            background: rgba(13, 79, 139, 0.1);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+        }
+
+        .portafolio-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .portafolio-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        .portafolio-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray-light);
+            font-weight: 600;
+        }
+
         /* Formulario */
         .formulario-section {
             background: #f7fbff;
@@ -650,7 +758,6 @@
         .faq-item:hover {
             box-shadow: 0 4px 20px var(--shadow);
         }
-        }
 
         .faq-question {
             padding: 1.5rem;
@@ -746,6 +853,40 @@
         }
 
         /* Responsive */
+        @media (max-width: 992px) {
+            header {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .main-nav {
+                order: 4;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                display: none;
+                padding: 0.5rem 0 0.25rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .main-nav.open {
+                display: flex;
+            }
+
+            .main-nav a {
+                padding: 0.85rem 0.5rem;
+            }
+
+            .nav-toggle {
+                display: block;
+                margin-left: auto;
+            }
+
+            .cta-header {
+                order: 3;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -783,10 +924,6 @@
 
             .btn-text {
                 display: none;
-            }
-
-            .nav-toggle {
-                display: block;
             }
 
             section {
@@ -903,7 +1040,7 @@
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo">
+        <a href="#inicio" class="logo">
             <svg class="logo-mark" viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg" aria-label="AGNEXUSUIO logo">
                 <defs>
                     <linearGradient id="logoGradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -939,6 +1076,12 @@
                 <span class="logo-subtitle">NETWORKS</span>
             </span>
         </a>
+        <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#soluciones">Soluciones</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
         <div class="cta-header">
             <a href="mailto:contacto@agnexusuio.com" class="email-btn">
                 <span>✉️</span>
@@ -950,18 +1093,18 @@
                 <span class="btn-text">WhatsApp</span>
             </a>
         </div>
-        <button class="nav-toggle">☰</button>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">☰</button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Inicio -->
+    <section class="hero" id="inicio">
         <div class="hero-content">
             <div class="hero-badge">✓ Confiabilidad garantizada | Soporte 24/7</div>
             <h1>Conectividad Empresarial que Impulsa tu Negocio</h1>
             <p class="hero-subtitle">Implementamos soluciones tecnológicas empresariales que mejoran la conectividad, la
                 comunicación y el control operativo de tu negocio</p>
             <div class="hero-cta">
-                <a href="#formulario" class="btn btn-primary">Solicita tu Diagnóstico Gratis</a>
+                <a href="#contacto" class="btn btn-primary">Solicita tu Diagnóstico Gratis</a>
                 <a href="https://wa.me/593992217314?text=Hola%20AGNEXUSUIO!%20Quiero%20agendar%20una%20consulta"
                     target="_blank" class="btn btn-secondary">Hablar con un Experto</a>
             </div>
@@ -970,8 +1113,8 @@
         </div>
     </section>
 
-    <!-- Problemas que Resolvemos -->
-    <section class="problemas">
+    <!-- Soluciones -->
+    <section class="problemas" id="soluciones">
         <h2 class="section-title">¿Cuáles son tus Desafíos?</h2>
         <p class="section-subtitle">Identificamos y resolvemos los problemas de conectividad, comunicación y control que
             limitan el crecimiento de tu empresa</p>
@@ -1004,9 +1147,8 @@
         </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="servicios">
-        <h2 class="section-title">Nuestras Soluciones</h2>
+    <section class="servicios" aria-labelledby="soluciones-servicios">
+        <h2 class="section-title" id="soluciones-servicios">Nuestras Soluciones</h2>
         <p class="section-subtitle">Servicios profesionales diseñados para empresas como la tuya</p>
         <div class="servicios-grid">
             <div class="servicio-card">
@@ -1083,10 +1225,54 @@
         </div>
     </section>
 
-    <!-- Formulario -->
-    <section class="formulario-section" id="formulario">
-        <h2 class="section-title">Consigue tu Diagnóstico Gratuito</h2>
-        <p class="section-subtitle">Completa el formulario y nos pondremos en contacto en 24 horas</p>
+    <!-- Portafolio -->
+    <section class="portafolio" id="portafolio">
+        <h2 class="section-title">Portafolio</h2>
+        <p class="section-subtitle">Proyectos recientes de infraestructura, conectividad y monitoreo para empresas en Ecuador</p>
+        <div class="portafolio-grid">
+            <article class="portafolio-card">
+                <div class="portafolio-thumb" aria-hidden="true">🌐</div>
+                <div class="portafolio-body">
+                    <span class="portafolio-tag">Redes</span>
+                    <h3>Red multi-sucursal retail</h3>
+                    <p>Interconexión de 4 puntos de venta con VPN, redundancia de enlace y monitoreo centralizado para operación continua.</p>
+                    <p class="portafolio-meta">Quito · Sector comercial</p>
+                </div>
+            </article>
+            <article class="portafolio-card">
+                <div class="portafolio-thumb" aria-hidden="true">📱</div>
+                <div class="portafolio-body">
+                    <span class="portafolio-tag">Telefonía IP</span>
+                    <h3>PBX para oficina corporativa</h3>
+                    <p>Migración de telefonía analógica a IP con extensiones móviles, grabación de llamadas y colas de atención.</p>
+                    <p class="portafolio-meta">Quito · Servicios profesionales</p>
+                </div>
+            </article>
+            <article class="portafolio-card">
+                <div class="portafolio-thumb" aria-hidden="true">📡</div>
+                <div class="portafolio-body">
+                    <span class="portafolio-tag">WiFi</span>
+                    <h3>WiFi de alta densidad</h3>
+                    <p>Cobertura indoor/outdoor para más de 120 usuarios simultáneos con segmentación de invitados y red corporativa.</p>
+                    <p class="portafolio-meta">Pichincha · Hospitalidad</p>
+                </div>
+            </article>
+            <article class="portafolio-card">
+                <div class="portafolio-thumb" aria-hidden="true">📊</div>
+                <div class="portafolio-body">
+                    <span class="portafolio-tag">IoT</span>
+                    <h3>Monitoreo LoRaWAN en almacén</h3>
+                    <p>Sensores de temperatura y humedad con alertas en tiempo real para cadena de frío y control de inventario sensible.</p>
+                    <p class="portafolio-meta">Quito · Logística</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="formulario-section" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-subtitle">Consigue tu diagnóstico gratuito — te respondemos en 24 horas</p>
 
         <div class="form-container">
             <form id="leadForm">
@@ -1137,8 +1323,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq" aria-label="Preguntas frecuentes">
         <h2 class="section-title">Preguntas Frecuentes</h2>
         <p class="section-subtitle">Resolvemos tus dudas</p>
 
@@ -1262,12 +1447,11 @@
                 </div>
             </div>
             <div class="footer-section">
-                <h4>Servicios</h4>
-                <a href="#servicios">Redes Empresariales</a>
-                <a href="#servicios">Telefonía IP</a>
-                <a href="#servicios">WiFi Profesional</a>
-                <a href="#servicios">Monitoreo IoT</a>
-                <a href="#servicios">Soporte 24/7</a>
+                <h4>Navegación</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#soluciones">Soluciones</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
         <div class="footer-divider">
@@ -1359,6 +1543,44 @@ Mensaje: ${mensaje}
             });
         });
 
+        // Menú móvil
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.getElementById('mainNav');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Enlace activo según sección visible
+        const navLinks = mainNav.querySelectorAll('a');
+        const sections = ['inicio', 'soluciones', 'portafolio', 'contacto']
+            .map(id => document.getElementById(id))
+            .filter(Boolean);
+
+        function setActiveNav() {
+            let current = sections[0].id;
+            const offset = 120;
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - offset) {
+                    current = section.id;
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+            });
+        }
+
+        window.addEventListener('scroll', setActiveNav, { passive: true });
+        setActiveNav();
+
         // Smooth scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1386,7 +1608,7 @@ Mensaje: ${mensaje}
             });
         }, observerOptions);
 
-        document.querySelectorAll('.problema-card, .servicio-card, .faq-item').forEach(el => {
+        document.querySelectorAll('.problema-card, .servicio-card, .portafolio-card, .faq-item').forEach(el => {
             observer.observe(el);
         });
 
